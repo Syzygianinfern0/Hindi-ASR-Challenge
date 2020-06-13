@@ -51,6 +51,7 @@
 %WER 28.84 [ 12248 / 42473, 2205 ins, 2308 del, 7735 sub ] exp_40_hour_model/tri3_2500_30000/decode_eval/wer_15_0.0
 
 ### 2500, 16
+%WER 28.24 [ 11995 / 42473, 2093 ins, 2410 del, 7492 sub ] exp_40_hour_model/tri3_2500_40000/decode_eval/wer_16_0.0
 
 ### 3000, 12
 
