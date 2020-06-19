@@ -1,11 +1,12 @@
 # ASR-NPTEL-Challenge
-**What is this about?**
+## What is this about?
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus sagittis dictum. Praesent feugiat ullamcorper urna, nec rutrum ex blandit eget. Nunc eget tellus mauris. Aenean magna libero, venenatis sit amet risus sit amet, ultrices maximus dui. Curabitur porttitor elit non sem tempus, sed tempus nunc laoreet. Aenean eget libero a nisi elementum commodo non vel est. Nam pretium leo nec neque aliquet faucibus. Maecenas eget consectetur ante. In tempus viverra vehicula. Proin nec molestie magna. Etiam non nunc lobortis, vehicula eros ut, mollis neque. Donec ullamcorper velit eget libero euismod aliquet. Cras nec massa nunc. Proin sit amet nulla convallis, tincidunt tellus vitae, imperdiet leo.
 
-**GUIDELINES** 
+## Guidelines and Important Dates
 
-**SOME LINKS OF THE LAB**
+## Get In Touch With Us!
+(Insert Links)
 - one
 - two
 
@@ -29,13 +30,20 @@ condimentum auctor sem.
 
 </details>
 
-## Running the Examples
-The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and can be found under the `models` directly.
-
-### Colab demo
+## Quickstart
+### Colab Demo
 // Link
 
 // notes
+
+### Spin-it Up Locally
+// Link
+
+// notes
+
+## Running the Examples
+The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and can be found under the `models` directly.
+
 
 ### GMM-HMM Acoustic Model
 // cmds
