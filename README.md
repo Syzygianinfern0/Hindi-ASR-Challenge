@@ -33,7 +33,7 @@ condimentum auctor sem.
 ## Running the Examples
 The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and can be found under the `models` directly.
 
-### Colab demo
+### Quickstart - Colab Demo
 // Link
 
 // notes
