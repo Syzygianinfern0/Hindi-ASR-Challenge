@@ -10,7 +10,7 @@ echo "Cloning Kaldi"
   echo "" >extras/check_dependencies.sh
   chmod +x extras/check_dependencies.sh
   echo "Compiling the necessary packages..."
-  make sph2pipe sclite >/dev/null
+  make sph2pipe sclite
 )
 
 echo "Downloading the pre-build kaldi binary"
