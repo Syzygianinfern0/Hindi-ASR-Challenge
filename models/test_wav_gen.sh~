@@ -1,0 +1,5 @@
+#. ./cmd.sh
+#. ./path.sh
+#. ./utils/parse_options.sh
+${PWD}/test_wav_gen.py --wav-path="/media/srivenkat/New Volume F/Projects/Automatic-Speech-Recognition/test-scripts/wav_dir" \
+                --data-path="/media/srivenkat/New Volume F/Projects/Automatic-Speech-Recognition/test-scripts/data_dir"
