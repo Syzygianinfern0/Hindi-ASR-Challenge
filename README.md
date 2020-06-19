@@ -30,13 +30,20 @@ condimentum auctor sem.
 
 </details>
 
-## Running the Examples
-The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and can be found under the `models` directly.
-
-### Quickstart - Colab Demo
+## Quickstart
+### Colab Demo
 // Link
 
 // notes
+
+### Spin-it Up Locally
+// Link
+
+// notes
+
+## Running the Examples
+The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and can be found under the `models` directly.
+
 
 ### GMM-HMM Acoustic Model
 // cmds
