@@ -29,9 +29,15 @@ participant's data.
 - Announcement of resules: xx xx 2020
 
 ## Get In Touch With Us!
-(Insert Links)
-- one
-- two
+We would love to get in touch with you in the following ways:
+- mail to xxxxxx@xxxx.xx
+- mail to speechiitm@gmail.com. 
+- contact number xxxxxxxx
+
+**Related Links**:
+- Lab Website: 
+- Official Site of Dr. Umesh S: http://www.ee.iitm.ac.in/~umeshs/
+- Official Institute Link: https://www.iitm.ac.in/
 
 # Get Started
 ## Link to the Data
