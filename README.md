@@ -1,9 +1,32 @@
 # ASR-NPTEL-Challenge
 ## What is this about?
+This challenge is held to help advance State-of-the-Art performance in Artificial Speech Recognition and spread the spirit 
+of research for the same. Conducted by the Speech Processing Lab of IITM under Dr. Umesh S., this is a particularly 
+difficult challenge of generating transcripts from audio files from actual [NPTEL](https://nptel.ac.in/) lectures 
+originally in Hindi. 
+The text data has been manually constructed and cleaned by numerous transcriber by NPTEL. We are releasing about 40 
+hours subset of hindi audio along with the corresponding transcripts and time-stamps. The challenge is open to all 
+irrespective of being individuals, teams or organizations. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus sagittis dictum. Praesent feugiat ullamcorper urna, nec rutrum ex blandit eget. Nunc eget tellus mauris. Aenean magna libero, venenatis sit amet risus sit amet, ultrices maximus dui. Curabitur porttitor elit non sem tempus, sed tempus nunc laoreet. Aenean eget libero a nisi elementum commodo non vel est. Nam pretium leo nec neque aliquet faucibus. Maecenas eget consectetur ante. In tempus viverra vehicula. Proin nec molestie magna. Etiam non nunc lobortis, vehicula eros ut, mollis neque. Donec ullamcorper velit eget libero euismod aliquet. Cras nec massa nunc. Proin sit amet nulla convallis, tincidunt tellus vitae, imperdiet leo.
+A baseline of GMM-HMM and TDNN models are set up and the pre-trained model weights are available for download (discussed
+below).
 
-## Guidelines and Important Dates
+
+## Guidelines
+- The data can be freely downloaded after filling up a google doc and agreeing to the *License of Fair Use*. The data 
+will also be publicly available after the end of the challenge in the good spirit of research, development and 
+advancement of the Speech Recognition domain of the Deep Learning community.
+- Any additional data can be used for training (public and private) as long as the participant(s) have legal rights over 
+it. The Lab and and Institute in no way will be held responsible in any way with respect to copyright claims of the 
+participant's data.
+- Submissions are to be made [here]. A leaderboard is be maintained regularly and can be checked [here].
+
+### Important Dates and Timeline
+- Release of training data: xx xx 2020
+- Start of challenge and opening of submissions: xx xx 2020
+- Release of additional training data: xx xx 2020
+- Closing of submission site: xx xx 2020
+- Announcement of resules: xx xx 2020
 
 ## Get In Touch With Us!
 (Insert Links)
