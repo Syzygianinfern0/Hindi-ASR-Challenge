@@ -23,11 +23,11 @@ decode_nj=10
 train_nj=10
 
 #Set the following flags = 1 to run that particular block of code
-prepare_lang=0
-mfcc=0
-mono=0
-tri1=0
-tri2=0
+prepare_lang=1
+mfcc=1
+mono=1
+tri1=1
+tri2=1
 tri3=1
 
 if [ $prepare_lang -eq 1 ]; then  
@@ -40,6 +40,7 @@ echo ===========================================================================
 		python steps/data/generate_wav_scp.py \
 		  --wav-path=$audio_dir/$x \
 		  --scp-path=$data/$x || exit 1;	
+	done
 	
 	# Prepare language model	
 	utils/prepare_lang.sh $data/local/dictionary \
