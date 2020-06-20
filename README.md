@@ -61,18 +61,22 @@ condimentum auctor sem.
 
 ## Quickstart
 ### Colab Demo
-// Link
+Especially targeted at beginners and participant who would like to get a hand at ASR in practise, a ready to run recipe
+notebook on Google Colabratory of the pre-trained baseline model is available [here]. The notebook runs through the setup
+of the Kaldi environment and given any WAV file (hindi) can generate transcriptions.
 
-// notes
+Please checkout the `quickstart` directory for more information on the model and a downloadable notebook. 
 
 ### Spin-it Up Locally
-// Link
+If you already have [Kaldi-ASR](https://kaldi-asr.org/) set up on your local hardware, we would recommend you to try to 
+spin up the above mentioned colab demo in the form of a script that does the same.
 
-// notes
+More information on running the script can also be found under the `quickstart` directory.
 
-## Running the Examples
-The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and can be found under the `models` directly.
-
+## Running the Baseline Models
+The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and the training scripts can be found under the 
+`models` directory. The pre-trained models from these baseline are also available for download considering if the 
+participants might want to start from a checkpoint.
 
 ### GMM-HMM Acoustic Model
 // cmds
