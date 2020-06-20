@@ -15,7 +15,7 @@ args = parser.parse_args()
 #check if directories exist
 if not os.path.exists(args.wav_path):
     sys.exit("wav files not found")
-if not os.path.exists(args.data_path):
+if not os.path.exists(args.scp_path):
     sys.exit("wav files not found")
 
 paths = []
@@ -25,9 +25,6 @@ for _,_,files in os.walk(args.wav_path,topdown=True):
         paths.append(os.path.join(args.wav_path, file))
         fnames.append(file.replace(".wav",""))
     
-with open(os.path.join(args.data_path,"wav.scp"),"w") as f:
+with open(os.path.join(args.scp_path,"wav.scp"),"w") as f:
     for i in range(len(paths)):
         f.write("{}\t{}\n".format(fnames[i], paths[i]))
-    
-if __name__ == "__main__":
-    main()
