@@ -7,7 +7,8 @@
 
 user=username    #user name;
 dumpdir=dump    #path to store features generated 
-audio_dir=/home/$USER/downloads   #complete path to the folder with all wav audio files; should be organised in train, dev, eval subfolders
+#audio_dir=/home/$USER/downloads   #complete path to the folder with all wav audio files; should be organised in train, dev, eval subfolders
+audio_dir=/speech/data/IITM_DATABASE/Hindi/
 
 # Acoustic model parameters
 data=data    #Path to your data directory
@@ -35,7 +36,7 @@ echo ===========================================================================
 echo "                      Language model preparation                          "
 echo ============================================================================           
 	
-	# Create scp files
+	#Create scp files
 	for x in $train_set $recog_sets; do
 		python steps/data/generate_wav_scp.py \
 		  --wav-path=$audio_dir/$x \
