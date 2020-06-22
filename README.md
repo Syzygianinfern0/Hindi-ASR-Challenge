@@ -1,15 +1,25 @@
 # ASR-NPTEL-Challenge
 ## What is this about?
-This challenge is held to help advance State-of-the-Art performance in Artificial Speech Recognition and spread the spirit 
-of research for the same. Conducted by the Speech Processing Lab of IITM under Dr. Umesh S., this is a particularly 
-difficult challenge of generating transcripts from audio files from actual [NPTEL](https://nptel.ac.in/) lectures 
-originally in Hindi. 
-The text data has been manually constructed and cleaned by numerous transcriber by NPTEL. We are releasing about 40 
-hours subset of hindi audio along with the corresponding transcripts and time-stamps. The challenge is open to all 
+This challenge is held to help advance State-of-the-Art performance in Artificial Speech Recognition of Hindi Language
+and spread the spirit of research for the same. Conducted by the Speech Processing Lab of IITM under Dr. Umesh S., this 
+is a particularly difficult challenge of generating transcripts from audio files read by volunteers reading actual
+news-paper articles. 
+
+This challenge is a part of the [National Language Translation Mission](http://psa.gov.in/pmstiac-missions/natural-language-translation) 
+funded by [MeitY](https://meity.gov.in/).
+
+The text data was crawled from newspapers, and then volunteers were asked to read them. It covers genres like politics, 
+sports, entertainment, etc. 
+The following data sets will be released for this challenge:
+- Train Set: 40 hours
+- Dev Set: 5 hours
+- Test Set - 5 hours 
+
+along with the corresponding transcripts and time-stamps. The challenge is open to all 
 irrespective of being individuals, teams or organizations. 
 
 A baseline of GMM-HMM and TDNN models are set up and the pre-trained model weights are available for download (discussed
-below).
+below). Lexicons, results and recipes to replicate the baseline experiments are also be made available.
 
 
 ## Guidelines
