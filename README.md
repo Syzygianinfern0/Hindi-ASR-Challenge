@@ -1,4 +1,6 @@
-# ASR-NPTEL-Challenge
+# Hindi-ASR-Challenge
+🎯 Speech Recognition Challenge by Speech Lab - IIT Madras
+
 ## What is this about?
 This challenge is held to help advance State-of-the-Art performance in Artificial Speech Recognition of Hindi Language
 and spread the spirit of research for the same. Conducted by the Speech Processing Lab of IITM under Dr. Umesh S., this 
