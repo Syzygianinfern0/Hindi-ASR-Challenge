@@ -35,6 +35,11 @@ participant's data.
 should include the ASR output produced by the system and a brief description of the system. Participating teams can 
 submit a maximum of 10 submissions per team
 
+#### Tracks
+- Closed Hindi-ASR Challenge: Only the training data distributed as part of the challenge can be used to train the 
+models (both acoustic and language models)
+- Open Hindi-ASR Challenge: You can use any external/additional data to train the acoustic and language models.  
+
 Results will be displayed on a leaderboard throughout the period that the submission site is open
 
 ### Important Dates and Timeline
