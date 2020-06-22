@@ -280,21 +280,21 @@ def train(args, run_opts):
 
     # Copy phones.txt from tree-dir to dir. Later, steps/nnet3/decode.sh will
     # use it to check compatibility between training and decoding phone-sets.
-#    shutil.copy('{0}/phones.txt'.format(args.tree_dir), args.dir)
+    shutil.copy('{0}/phones.txt'.format(args.tree_dir), args.dir)
 
     # Set some variables.
     num_jobs = common_lib.get_number_of_jobs(args.tree_dir)
     feat_dim = common_lib.get_feat_dim(args.feat_dir)
     ivector_dim = common_lib.get_ivector_dim(args.online_ivector_dir)
     ivector_id = common_lib.get_ivector_extractor_id(args.online_ivector_dir)
-    """
+
     # split the training data into parts for individual jobs
     # we will use the same number of jobs as that used for alignment
     common_lib.execute_command("utils/split_data.sh {0} {1}"
                                "".format(args.feat_dir, num_jobs))
     with open('{0}/num_jobs'.format(args.dir), 'w') as f:
         f.write(str(num_jobs))
-    """
+
     if args.input_model is None:
         config_dir = '{0}/configs'.format(args.dir)
         var_file = '{0}/vars'.format(config_dir)
@@ -304,7 +304,7 @@ def train(args, run_opts):
         # If args.input_model is specified, the model left and right contexts
         # are computed using input_model.
         variables = common_train_lib.get_input_model_info(args.input_model)
-    
+
     # Set some variables.
     try:
         model_left_context = variables['model_left_context']
@@ -373,10 +373,10 @@ def train(args, run_opts):
             raise Exception("Chain egs generation expects {0}/den.fst, "
                             "{0}/normalization.fst and {0}/tree "
                             "to exist.".format(args.dir))
-        """
-        # this is where get_egs.sh is called.
+	        
+	# this is where get_egs.sh is called.
         chain_lib.generate_chain_egs(
-            dir=args.dir, data=args.feat_dir,
+            data=args.feat_dir, dir=args.dir,
             lat_dir=args.lat_dir, egs_dir=default_egs_dir,
             left_context=egs_left_context,
             right_context=egs_right_context,
@@ -394,12 +394,12 @@ def train(args, run_opts):
             online_ivector_dir=args.online_ivector_dir,
             frames_per_iter=args.frames_per_iter,
             stage=args.egs_stage)
-        """
+	
     if args.egs_dir is None:
         egs_dir = default_egs_dir
     else:
         egs_dir = args.egs_dir
-    
+
     [egs_left_context, egs_right_context,
      frames_per_eg_str, num_archives] = (
          common_train_lib.verify_egs_dir(egs_dir, feat_dim,
@@ -408,18 +408,17 @@ def train(args, run_opts):
                                          egs_left_context_initial,
                                          egs_right_context_final))
     assert(args.chunk_width == frames_per_eg_str)
-    
     num_archives_expanded = num_archives * args.frame_subsampling_factor
 
     if (args.num_jobs_final > num_archives_expanded):
         raise Exception('num_jobs_final cannot exceed the '
                         'expanded number of archives')
-    """
+
     # copy the properties of the egs to dir for
     # use during decoding
     logger.info("Copying the properties from {0} to {1}".format(egs_dir, args.dir))
     common_train_lib.copy_egs_properties_to_exp_dir(egs_dir, args.dir)
-    """
+
     if not os.path.exists('{0}/valid_diagnostic.cegs'.format(egs_dir)):
         if (not os.path.exists('{0}/valid_diagnostic.scp'.format(egs_dir))):
             raise Exception('Neither {0}/valid_diagnostic.cegs nor '
@@ -428,7 +427,7 @@ def train(args, run_opts):
         use_multitask_egs = True
     else:
         use_multitask_egs = False
-    """
+
     if ((args.stage <= -2) and (os.path.exists(args.dir+"/configs/init.config"))
             and (args.input_model is None)):
         logger.info('Computing the preconditioning matrix for input features')
@@ -446,7 +445,7 @@ def train(args, run_opts):
 
     with open("{0}/frame_subsampling_factor".format(args.dir), "w") as f:
         f.write(str(args.frame_subsampling_factor))
-    """
+
     # set num_iters so that as close as possible, we process the data
     # $num_epochs times, i.e. $num_iters*$avg_num_jobs) ==
     # $num_epochs*$num_archives, where

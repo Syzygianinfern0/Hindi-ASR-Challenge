@@ -225,7 +225,7 @@ if [ $stage -le 15 ]; then
 
   	prefinal-layer name=prefinal-xent input=prefinal-l $prefinal_opts big-dim=1024 small-dim=192
   	output-layer name=output-xent dim=$num_targets learning-rate-factor=$learning_rate_factor $output_opts
-	EOF
+EOF
 	
   	steps/nnet3/xconfig_to_configs.py --xconfig-file $dir/configs/network.xconfig --config-dir $dir/configs/
 fi
@@ -300,7 +300,7 @@ if [ $stage -le 18 ]; then
 	frames_per_chunk=$(echo $chunk_width | cut -d, -f1)
   	rm $dir/.error 2>/dev/null || true
 
-  	for data in "eval"; do
+  	for data in $test_sets; do
     	(
       		#data_affix=$(echo $data | sed s/test_//)
       		#nspk=$(wc -l <$datadir/${data}_hires/spk2utt)
@@ -344,7 +344,7 @@ if $test_online_decoding && [ $stage -le 19 ]; then
 
   	rm $dir/.error 2>/dev/null || true
 
-  	for data in "eval"; do
+  	for data in $test_sets; do
     	(
 		data_affix=$(echo $data | sed s/test_//)
 	      	nspk=$(wc -l <data/${data}_hires/spk2utt)
