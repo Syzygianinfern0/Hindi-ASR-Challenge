@@ -1,19 +1,25 @@
 #!/usr/bin/env bash
-# Modified version of https://github.com/espnet/espnet/blob/master/ci/install_kaldi.sh
+# This script can be modified to your needs for the installation
+# of the Kaldi-ASR framwork on Debian-Based machines
 
-set -euo pipefail
+sudo apt update &&
+  apt install -y \
+    cmake \
+    sox \
+    ffmpeg \
+    g++ \
+    automake \
+    autoconf \
+    libtool \
+    subversion \
+    git \
+    zlib1g-dev \
+    unzip \
+    gfortran \
+    python2.7 \
+    python3
 
-echo "Cloning Kaldi"
-[ ! -d kaldi ] && git clone https://github.com/kaldi-asr/kaldi --depth 1
-(
-  cd kaldi/tools || exit 1
-  echo "" >extras/check_dependencies.sh
-  chmod +x extras/check_dependencies.sh
-  echo "Compiling the necessary packages..."
-  make sph2pipe sclite openfst
-)
-
-echo "Downloading the pre-build kaldi binary"
-[ ! -e ubuntu16-featbin.tar.gz ] && wget --tries=3 https://github.com/espnet/kaldi-bin/releases/download/v0.0.1/ubuntu16-featbin.tar.gz
-tar -xf ./ubuntu16-featbin.tar.gz
-cp featbin/* kaldi/src/featbin/
+git clone --depth 1 https://github.com/kaldi-asr/kaldi.git &&
+  cd kaldi/tools &&
+  extras/install_mkl.sh && make -j $(nproc) &&
+  cd ../src && ./configure --shared && make depend -j $(nproc) && make -j $(nproc)
