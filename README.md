@@ -32,11 +32,10 @@ participant's data.
 - Submissions are to be made [here]. A leaderboard is be maintained regularly and can be checked [here].
 
 ### Important Dates and Timeline
-- Release of training data: xx xx 2020
-- Start of challenge and opening of submissions: xx xx 2020
-- Release of additional training data: xx xx 2020
-- Closing of submission site: xx xx 2020
-- Announcement of resules: xx xx 2020
+- Release of train,dev data: June 30, 2020
+- Eval data release and opening of submission site: July 24, 2020
+- Closing of submission site: August 2, 2020 (midnight anywhere in the world, i.e., 12pm UTC on August 2, 2020)
+- Announcement of results: August 10 2020
 
 ## Get In Touch With Us!
 We would love to get in touch with you in the following ways:
