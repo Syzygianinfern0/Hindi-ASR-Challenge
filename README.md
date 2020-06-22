@@ -1,6 +1,23 @@
 # Hindi-ASR-Challenge
 🎯 Speech Recognition Challenge by Speech Lab - IIT Madras
 
+Table of Contents
+=================
+   * [What is this about?](#what-is-this-about)
+      * [Guidelines](#guidelines)
+         * [Tracks](#tracks)
+         * [Important Dates and Timeline](#important-dates-and-timeline)
+      * [Get In Touch With Us!](#get-in-touch-with-us)
+   * [Get Started](#get-started)
+      * [Link to the Data](#link-to-the-data)
+      * [Quickstart](#quickstart)
+         * [Binder Demo](#binder-demo)
+         * [Spin-it Up Locally](#spin-it-up-locally)
+      * [Running the Baseline Models](#running-the-baseline-models)
+         * [GMM-HMM Acoustic Model](#gmm-hmm-acoustic-model)
+         * [Chain Model (Time-Delay Neural Network)](#chain-model-time-delay-neural-network)
+      * [Pre-Trained Weights](#pre-trained-weights)
+
 ## What is this about?
 This challenge is held to help advance State-of-the-Art performance in Artificial Speech Recognition of Hindi Language
 and spread the spirit of research for the same. Conducted by the Speech Processing Lab of IITM under Dr. Umesh S., this 
