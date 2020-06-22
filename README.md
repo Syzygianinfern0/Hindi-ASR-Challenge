@@ -1,8 +1,7 @@
 # Hindi-ASR-Challenge
 🎯 Speech Recognition Challenge by Speech Lab - IIT Madras
 
-Table of Contents
-=================
+### Table of Contents
    * [What is this about?](#what-is-this-about)
       * [Guidelines](#guidelines)
          * [Tracks](#tracks)
