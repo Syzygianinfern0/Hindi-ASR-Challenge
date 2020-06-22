@@ -21,7 +21,7 @@ along with the corresponding transcripts and time-stamps. The challenge is open 
 irrespective of being individuals, teams or organizations. 
 
 A baseline of GMM-HMM and TDNN models are set up and the pre-trained model weights are available for download (discussed
-below). Lexicons, results and recipes to replicate the baseline experiments are also be made available.
+below). Lexicons, results and recipes to replicate the baseline experiments are also made available.
 
 
 ## Guidelines
@@ -31,7 +31,11 @@ advancement of the Speech Recognition domain of the Deep Learning community.
 - Any additional data can be used for training (public and private) as long as the participant(s) have legal rights over 
 it. The Lab and and Institute in no way will be held responsible in any way with respect to copyright claims of the 
 participant's data.
-- Submissions are to be made [here]. A leaderboard is be maintained regularly and can be checked [here].
+- Submissions are to be made [here]. A leaderboard is be maintained regularly and can be checked [here]. Submissions 
+should include the ASR output produced by the system and a brief description of the system. Participating teams can 
+submit a maximum of 10 submissions per team
+
+Results will be displayed on a leaderboard throughout the period that the submission site is open
 
 ### Important Dates and Timeline
 - Release of train,dev data: June 30, 2020
