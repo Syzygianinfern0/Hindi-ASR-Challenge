@@ -44,7 +44,8 @@ We would love to get in touch with you in the following ways:
 - contact number xxxxxxxx
 
 **Related Links**:
-- Lab Website: 
+- Challenge Website: https://sites.google.com/view/asr-challenge/home
+- Lab Website: https://speechiitm.wixsite.com/sphlab
 - Official Site of Dr. Umesh S: http://www.ee.iitm.ac.in/~umeshs/
 - Official Institute Link: https://www.iitm.ac.in/
 
