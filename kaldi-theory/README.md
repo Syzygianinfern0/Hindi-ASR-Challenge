@@ -17,10 +17,10 @@ Kaldi typically needs 2 kinds of transcription data to process the audio files. 
 
 The data directory given along with the challenge has 3 folders, train, dev, eval and local.
 The local directory contains the dictionary with information like 
--lexicon.txt
--silence_phones.txt
--non_silence_phones.txt
--optional_silence.txt
+- lexicon.txt
+- silence_phones.txt
+- non_silence_phones.txt
+- optional_silence.txt
 
 The dictionary will be used to create the `lang` directory for processing.
 
