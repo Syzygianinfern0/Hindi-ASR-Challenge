@@ -47,7 +47,7 @@ advancement of the Speech Recognition domain of the Deep Learning community.
 - Any additional data can be used for training (public and private) as long as the participant(s) have legal rights over 
 it. The Lab and and Institute in no way will be held responsible in any way with respect to copyright claims of the 
 participant's data.
-- Submissions are to be made [here]. A leaderboard is be maintained regularly and can be checked [here]. Submissions 
+- Submissions are to be made [here]. A leaderboard will be maintained regularly and can be checked [here]. Submissions 
 should include the ASR output produced by the system and a brief description of the system. Participating teams can 
 submit a maximum of 10 submissions per team
 
