@@ -1,7 +1,18 @@
 # Intro to Kaldi
 This short tutorial gives you a basic understanding of the data preparation part and how GMM-HMM models and TDNN models work to aid you in training a new model or debugging the scripts running.
 
-### Data preparation:
+### Language models, Grammar models and Acoustic models
+
+### Kaldi spectogram (optional)
+
+### Common file types used:
+`.scp` is a script file which maps a key to a file name or a unix pipe.
+
+`.ark` is a archive file which stores data in inline format.
+
+`.fst` is a compiled file created by openFST containing lexicons
+
+### Acoustic Data preparation:
 Kaldi typically needs 2 kinds of transcription data to process the audio files. They are stored in the `data` and `lang` directories.
 
 The data directory given along with the challenge has 3 folders, train, dev, eval and local.
@@ -42,3 +53,32 @@ utils/utt2spk_to_spk2utt.pl data/train/utt2spk > data/train/spk2utt
 ```
 
 For more details on data preparation for kaldi, visit https://kaldi-asr.org/doc/data_prep.html#data_prep_data
+
+### Features Extraction :
+
+Kaldi analyes a voice signal in the form of its Mel Spectrogram where its frequencies are represented in a mel scale. It extractes the MFCC features in this form and stores it in a feats.scp file.
+After normalisation, the Cepstral Mean and Variance Statistics (CMVN stats) are extracted and stored in the cmvn.ark files.
+
+### Monophone Training:
+
+Kaldi identifies different phenomes as phones and a monophone is a context independent phone. We initially train the model with monophones and then move on to triphones. This stage initialises a HMM-topoplogy and trains the model, aligning the features after every pass. It gives a relatively low accuracy compared to training with triphones.
+
+### Triphone training:
+
+After monophone training, align the audio with the acoustic model. The triphone training is a n-gram model which included contextual information. 
+It is done in 3 stages:
+
+1. Deltas +delta-deltas training:
+It computes the derivatives and double derivatives to supplement the MFCC features. The delta features are computed on a window of the original features where the delta-deltas are then computed on a larger window of the delta-features. 
+
+2. LDA-MLLT training: 
+The LDA or Linear Discriminant Analysis builds HMM states for the feature vectors but with a reduced feature space. The MLLT or Maximum Likelihood Linear Transform takes the reduced feature space from the LDA and derives a unique transformation for each speaker. So, it minimises difference among speakers and aids speaker normalisation.
+
+3. SAT training:
+The SAT or Speaker Adaptive Training normalises the speaker and noise features by adapting to each specific speaker with a particular data transform. It generalises the data better and reduces the effect of the speaker or the recording environment.
+
+
+### fMLLR Alignments:
+
+fMLLR or Feature Space Maximum Likelihood Linear Regression removes the speaker specific inormation from the acoustic data so that the model can then be aligned to a form a speaker independent form.
+
