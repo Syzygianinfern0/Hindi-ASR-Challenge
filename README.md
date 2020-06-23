@@ -41,7 +41,7 @@ below). Lexicons, results and recipes to replicate the baseline experiments are 
 
 
 ## Guidelines
-- The data can be freely downloaded after filling up a google doc and agreeing to the *License of Fair Use*. The data 
+- The data can be freely downloaded after registration for the challenge and agreeing to the *License of Fair Use*. The data 
 will also be publicly available after the end of the challenge in the good spirit of research, development and 
 advancement of the Speech Recognition domain of the Deep Learning community.
 - Any additional data can be used for training (public and private) as long as the participant(s) have legal rights over 
