@@ -6,11 +6,11 @@ This short tutorial gives you a basic understanding of the data preparation part
 ### Kaldi spectogram (optional)
 
 ### Common file types used:
-`.scp` is a script file which maps a key to a file name or a unix pipe.
+- `.scp` is a script file which maps a key to a file name or a unix pipe.
 
-`.ark` is a archive file which stores data in inline format.
+- `.ark` is a archive file which stores data in inline format.
 
-`.fst` is a compiled file created by openFST containing lexicons
+- `.fst` is a compiled file created by openFST containing lexicons
 
 ### Acoustic Data preparation:
 Kaldi typically needs 2 kinds of transcription data to process the audio files. They are stored in the `data` and `lang` directories.
@@ -81,4 +81,3 @@ The SAT or Speaker Adaptive Training normalises the speaker and noise features b
 ### fMLLR Alignments:
 
 fMLLR or Feature Space Maximum Likelihood Linear Regression removes the speaker specific inormation from the acoustic data so that the model can then be aligned to a form a speaker independent form.
-
