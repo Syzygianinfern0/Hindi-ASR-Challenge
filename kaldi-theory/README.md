@@ -35,19 +35,19 @@ Each of them have the foll. files:
 
 If you want to train your model with custom data for the open challenge, you will need to manually create some of these files.
 
--The `text` file contains transcriptions for each utterance. It has 2 columns, with the 1st one holding the utterance id and the 2nd one holding the corresponding transcription.
+- The `text` file contains transcriptions for each utterance. It has 2 columns, with the 1st one holding the utterance id and the 2nd one holding the corresponding transcription.
 
--The `segments` file holds the time offsets in each recording. `<utterance-id> <recording-id> <segment-begin> <segment-end>`
+- The `segments` file holds the time offsets in each recording. `<utterance-id> <recording-id> <segment-begin> <segment-end>`
 
--The `utt2spk` file references each utterance with the corresponding speaker who spoke it. It has the format `<utterance-id> <speaker-id>`
+- The `utt2spk` file references each utterance with the corresponding speaker who spoke it. It has the format `<utterance-id> <speaker-id>`
 
 In case the speaker id's are not known, they can be assumed to be same as the utterance id's.
 
 The other 2 files can be automatically generated.
 
--The `wav.scp` file will be automatically created when you run the run_gmm.sh script. It includes the path to all the audio files in the format: `<recording-id> <extended-filename>`
+- The `wav.scp` file will be automatically created when you run the run_gmm.sh script. It includes the path to all the audio files in the format: `<recording-id> <extended-filename>`
 
--The `spk2utt` file cross references each speaker with all his utterances in the format `<speaker-id> <utterance-id1> <utterance-id2> ....`. It can be generated using the command 
+- The `spk2utt` file cross references each speaker with all his utterances in the format `<speaker-id> <utterance-id1> <utterance-id2> ....`. It can be generated using the command 
 ```bash
 utils/utt2spk_to_spk2utt.pl data/train/utt2spk > data/train/spk2utt
 ```
