@@ -26,12 +26,12 @@ The dictionary will be used to create the `lang` directory for processing.
 
 The train, dev and eval folders in the data directory contain the transcriptions for the audio files.
 Each of them have the foll. files:
--segments
--spk2utt
--utt2spk
--text
--utt2dur
--wav.scp
+- segments
+- spk2utt
+- utt2spk
+- text
+- utt2dur
+- wav.scp
 
 If you want to train your model with custom data for the open challenge, you will need to manually create some of these files.
 
