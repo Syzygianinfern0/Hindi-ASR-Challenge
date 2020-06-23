@@ -373,7 +373,7 @@ def train(args, run_opts):
             raise Exception("Chain egs generation expects {0}/den.fst, "
                             "{0}/normalization.fst and {0}/tree "
                             "to exist.".format(args.dir))
-        """
+        
         # this is where get_egs.sh is called.
         chain_lib.generate_chain_egs(
             dir=args.dir, data=args.feat_dir,
@@ -394,7 +394,7 @@ def train(args, run_opts):
             online_ivector_dir=args.online_ivector_dir,
             frames_per_iter=args.frames_per_iter,
             stage=args.egs_stage)
-        """
+        
     if args.egs_dir is None:
         egs_dir = default_egs_dir
     else:

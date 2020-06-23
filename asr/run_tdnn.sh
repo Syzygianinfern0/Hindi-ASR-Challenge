@@ -225,7 +225,7 @@ if [ $stage -le 15 ]; then
 
   	prefinal-layer name=prefinal-xent input=prefinal-l $prefinal_opts big-dim=1024 small-dim=192
   	output-layer name=output-xent dim=$num_targets learning-rate-factor=$learning_rate_factor $output_opts
-	EOF
+EOF
 	
   	steps/nnet3/xconfig_to_configs.py --xconfig-file $dir/configs/network.xconfig --config-dir $dir/configs/
 fi
