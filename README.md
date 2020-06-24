@@ -65,11 +65,9 @@ Results will be displayed on a leaderboard throughout the period that the submis
 - Announcement of results: August 10 2020
 
 ## Get In Touch With Us!
-We would love to get in touch with you in the following ways:
-- mail to xxxxxx@xxxx.xx
-- mail to speechiitm@gmail.com. 
-- contact number xxxxxxxx
-
+- If there are any queries or issues, please open a GitHub Issue [here](https://github.com/Syzygianinfern0/Hindi-ASR-Challenge/issues/new) so that others with similar queries may also be benefit from the same.
+- You can also contact us over mail at speechiitm@gmail.com
+ 
 **Related Links**:
 - Challenge Website: https://sites.google.com/view/asr-challenge/home
 - Lab Website: https://speechiitm.wixsite.com/sphlab
@@ -189,3 +187,19 @@ participants might want to start from a checkpoint.
 // cmds
 
 // notes
+
+## Citations
+```
+@INPROCEEDINGS{
+         Povey_ASRU2011,
+         author = {Povey, Daniel and Ghoshal, Arnab and Boulianne, Gilles and Burget, Lukas and Glembek, Ondrej and Goel, Nagendra and Hannemann, Mirko and Motlicek, Petr and Qian, Yanmin and Schwarz, Petr and Silovsky, Jan and Stemmer, Georg and Vesely, Karel},
+       keywords = {ASR, Automatic Speech Recognition, GMM, HTK, SGMM},
+          month = dec,
+          title = {The Kaldi Speech Recognition Toolkit},
+      booktitle = {IEEE 2011 Workshop on Automatic Speech Recognition and Understanding},
+           year = {2011},
+      publisher = {IEEE Signal Processing Society},
+       location = {Hilton Waikoloa Village, Big Island, Hawaii, US},
+           note = {IEEE Catalog No.: CFP11SRW-USB},
+}
+```
