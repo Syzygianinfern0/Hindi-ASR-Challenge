@@ -65,10 +65,9 @@ Results will be displayed on a leaderboard throughout the period that the submis
 - Announcement of results: August 10 2020
 
 ## Get In Touch With Us!
-We would love to get in touch with you in the following ways:
-- Open a GitHub Issue [here](https://github.com/Syzygianinfern0/Hindi-ASR-Challenge/issues/new) (Fastest response)
-- Over mail at speechiitm@gmail.com 
-
+- If there are any queries or issues, please open a GitHub Issue [here](https://github.com/Syzygianinfern0/Hindi-ASR-Challenge/issues/new) so that others with similar queries may also be benefit from the same.
+- You can also contact us over mail at speechiitm@gmail.com
+ 
 **Related Links**:
 - Challenge Website: https://sites.google.com/view/asr-challenge/home
 - Lab Website: https://speechiitm.wixsite.com/sphlab
