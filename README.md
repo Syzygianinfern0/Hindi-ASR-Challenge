@@ -20,7 +20,7 @@
 ## What is this about?
 This challenge is held to help advance State-of-the-Art performance in Artificial Speech Recognition of Hindi Language
 and spread the spirit of research for the same. Conducted by the Speech Processing Lab of IITM under Dr. Umesh S, this challenge
-aims at generating transcripts from audio files read by volunteers reading actual news-paper articles. 
+aims at generating transcripts from audio files created by volunteers reading actual news-paper articles. 
 
 This challenge is a part of the [National Language Translation Mission](http://psa.gov.in/pmstiac-missions/natural-language-translation) 
 funded by [MeitY](https://meity.gov.in/).
