@@ -2,3 +2,6 @@
 	path = quickstart/WAV2TEXT
 	url = https://github.com/Syzygianinfern0/WAV2TEXT.git
 	branch = master
+[submodule "quickstart/stt"]
+	path = quickstart/stt
+	url = https://github.com/Syzygianinfern0/WAV2TEXT.git
