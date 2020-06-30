@@ -1,9 +1,9 @@
 # Quickstart
 
-The code in directory is especially aimed at giving a first hand experience to beginners and ones who would like to 
+The code in this directory is especially aimed at giving a first hand experience to beginners and ones who would like to 
 just obtain the results of the model without training them on their own.
 
-The `WAV2TEXT` directory here would redirect to a dedicated repository where you can checkout the source-code of the 
+The `stt` directory here would redirect to a dedicated repository where you can checkout the source-code of the 
 scripts used to generate the transcriptions. 
 
 Some points to note:
