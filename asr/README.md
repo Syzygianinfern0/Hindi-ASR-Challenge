@@ -1,60 +1,43 @@
-## tri1
-### 2000,12 
-%WER 32.53 [ 13815 / 42473, 2109 ins, 2828 del, 8878 sub ] exp_40_hour_model/tri1_2000_24000/decode_eval/wer_13_0.0
+# Train your own ASR model
 
-### 2000, 16
-%WER 31.76 [ 13488 / 42473, 2195 ins, 2530 del, 8763 sub ] exp_40_hour_model/tri1_2000_32000/decode_eval/wer_12_0.0
+We have set up all the scripts for you to build your own Gaussian Mixture Model (GMM), Hidden Markov Model (HMM) and a Chain Model using deep neural networks. We assume the user to have a basic knowledge of git and GitHub. If not, check out this [link](https://git-scm.com).
 
-### 2500, 12
-%WER 31.63 [ 13434 / 42473, 2127 ins, 2742 del, 8565 sub ] exp_40_hour_model/tri1_2500_30000/decode_eval/wer_13_0.0
+## Pre-trained model:
+We have attached a pretrained model for you to get an essence of the challenge. It also helps beginners to explore how ASR systems work. Follow the following steps to test our model on your own data.
 
-### 2500, 16
-%WER 31.01 [ 13170 / 42473, 2223 ins, 2425 del, 8522 sub ] exp_40_hour_model/tri1_2500_40000/decode_eval/wer_12_0.0
+- Open the webpage https://mybinder.org/v2/gh/Syzygianinfern0/WAV2TEXT.git/master
+- It redirects to a binder webpage. After a few minutes, it will open into a jupyter notebook environment.
+- Click the WAV2TXT folder to open the directory and run the **Speech to Text.ipynb** file. You can run all the cells to get the english translation for a pre recorded hindi audio file.
+- To test with your custom data, record it into a .wav format and upload it into the **data** directory with the name **speech.wav**. Running the same cells in the ipython notebook will give you the new translation.
+ 
+## Setup Scripts:
+The scripts in the [challenge repository](https://github.com/Speech-Lab-IITM/IITM-ASR-Challenge/tree/master/asr) can be directly used to train your GMM-HMM and Chain models. You need to make a local copy of the repository in your system using
+```
+git clone https://github.com/Speech-Lab-IITM/IITM-ASR-Challenge 
+```
 
-### 3000, 12
-%WER 31.10 [ 13207 / 42473, 2109 ins, 2684 del, 8414 sub ] exp_40_hour_model/tri1_3000_36000/decode_eval/wer_13_0.0
+The scripts require **Kaldi**, a popular speech recognition framework to be set up in your local systems. 
 
-### 3000, 16
-%WER 30.20 [ 12828 / 42473, 2045 ins, 2609 del, 8174 sub ] exp_40_hour_model/tri1_3000_48000/decode_eval/wer_13_0.0
+We recommend building Kaldi from scratch in your local system to enable all the features and customise it to your system's specifications. Checkout https://kaldi-asr.org/doc/install.html for detailed instructions.
 
----
+But during the build process, you might run into certain dependency mismatch issues or path related issues. So, you can set up a Docker Container in your system for a clean installation.
 
-## tri2
-### 2000,12 
-%WER 30.53 [ 12969 / 42473, 2120 ins, 2410 del, 8439 sub ] exp_40_hour_model/tri2_2000_24000/decode_eval/wer_13_0.0
+- Follow this link https://docs.docker.com/get-docker/ to install docker in your local systems. Different operating systems have different installation procedures. So, ensure that you install the right one.
+- The docker system for the challenge emulates a Ubuntu environment inside its container. 
+- After installing the docker file, navigate to the challenge repo after cloning it into your local machine.
+- Navigate to the tools directory and run the following command
+```bash
+$ chmod +x quickstart.sh
+$ ./quickstart.sh
+```
+- This will set up kaldi and all the dependencies into your container. Now, you can procedd with running the train scripts.
 
-### 2000, 16
-%WER 29.68 [ 12605 / 42473, 1975 ins, 2525 del, 8105 sub ] exp_40_hour_model/tri2_2000_32000/decode_eval/wer_14_0.0
+## Train Scripts:
+- Navigate to the asr folder in the Hindi-ASR-Challenge directory and edit **KALDI_ROOT** variable in the path.sh file to point to your locally installed kaldi directory. 
+- Download the data from the link given along with your registration and copy the path of that directory and enter it for the **audio_dir** argument in the **run_gmm.sh** file. 
+- Open your terminal in that directory and run ```bash -x run_gmm.sh``` to build your GMM-HMM model.
+- In the same terminal, run ```bash -x run_tdnn.sh```  to build your Chain model.
 
-### 2500, 12
-%WER 30.09 [ 12782 / 42473, 2024 ins, 2583 del, 8175 sub ] exp_40_hour_model/tri2_2500_30000/decode_eval/wer_14_0.0
 
-### 2500, 16
-%WER 29.36 [ 12469 / 42473, 2101 ins, 2314 del, 8054 sub ] exp_40_hour_model/tri2_2500_40000/decode_eval/wer_13_0.0
 
-### 3000, 12
-%WER 29.39 [ 12483 / 42473, 2039 ins, 2497 del, 7947 sub ] exp_40_hour_model/tri2_3000_36000/decode_eval/wer_14_0.0
 
-### 3000, 16
-%WER 28.47 [ 12091 / 42473, 1960 ins, 2445 del, 7686 sub ] exp_40_hour_model/tri2_3000_48000/decode_eval/wer_14_0.0
-
----
-
-## tri3
-### 2000,12 
-%WER 29.36 [ 12471 / 42473, 2248 ins, 2251 del, 7972 sub ] exp_40_hour_model/tri3_2000_24000/decode_eval/wer_14_0.0
-
-### 2000, 16
-%WER 28.61 [ 12150 / 42473, 2083 ins, 2481 del, 7586 sub ] exp_40_hour_model/tri3_2000_32000/decode_eval/wer_16_0.0
-
-### 2500, 12
-%WER 28.84 [ 12248 / 42473, 2205 ins, 2308 del, 7735 sub ] exp_40_hour_model/tri3_2500_30000/decode_eval/wer_15_0.0
-
-### 2500, 16
-%WER 28.24 [ 11995 / 42473, 2093 ins, 2410 del, 7492 sub ] exp_40_hour_model/tri3_2500_40000/decode_eval/wer_16_0.0
-
-### 3000, 12
-%WER 28.36 [ 12046 / 42473, 2155 ins, 2374 del, 7517 sub ] exp_40_hour_model/tri3_3000_36000/decode_eval/wer_16_0.0
-
-### 3000, 16
-%WER 27.75 [ 11787 / 42473, 2249 ins, 2075 del, 7463 sub ] exp_40_hour_model/tri3_3000_48000/decode_eval/wer_14_0.0
