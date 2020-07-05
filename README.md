@@ -4,18 +4,14 @@
 ### Table of Contents
    * [What is this about?](#what-is-this-about)
       * [Guidelines](#guidelines)
-         * [Tracks](#tracks)
-         * [Important Dates and Timeline](#important-dates-and-timeline)
-      * [Get In Touch With Us!](#get-in-touch-with-us)
+      * [Tracks](#tracks)
+      * [Important Dates and Timeline](#important-dates-and-timeline)
    * [Get Started](#get-started)
       * [Link to the Data](#link-to-the-data)
       * [Quickstart](#quickstart)
-         * [Binder Demo](#binder-demo)
-         * [Spin-it Up Locally](#spin-it-up-locally)
-      * [Running the Baseline Models](#running-the-baseline-models)
-         * [GMM-HMM Acoustic Model](#gmm-hmm-acoustic-model)
-         * [Chain Model (Time-Delay Neural Network)](#chain-model-time-delay-neural-network)
-      * [Pre-Trained Weights](#pre-trained-weights)
+      * [Building Your Own ASR Model](#building-your-own-asr-model)
+   * [Get In Touch With Us!](#get-in-touch-with-us)
+   * [Citations](#citations)
 
 ## What is this about?
 This challenge is held to help advance State-of-the-Art performance in Artificial Speech Recognition of Hindi Language
@@ -39,7 +35,7 @@ A baseline of GMM-HMM and TDNN models are set up and the pre-trained model weigh
 below). Lexicons, results and recipes to replicate the baseline experiments are also made available.
 
 
-## Guidelines
+### Guidelines
 - The data can be freely downloaded after registration for the challenge and agreeing to the *License of Fair Use*. The data 
 will also be publicly available after the end of the challenge in the good spirit of research, development and 
 advancement of the Speech Recognition domain of the Deep Learning community.
@@ -50,7 +46,7 @@ participant's data.
 should include the ASR output produced by the system and a brief description of the system. Participating teams can 
 submit a maximum of 10 submissions per team
 
-#### Tracks
+### Tracks
 - **Closed Hindi-ASR Challenge**: Only the training data distributed as part of the challenge can be used to train the 
 models (both acoustic and language models)
 - **Open Hindi-ASR Challenge**: You can use any external/additional data to train the acoustic and language models.  
@@ -58,27 +54,45 @@ models (both acoustic and language models)
 Results will be displayed on a leaderboard throughout the period that the submission site is open
 
 ### Important Dates and Timeline
-- Release of train,dev data: June 30, 2020
+- Release of train,dev data: July 6 2020
 - Eval data release and opening of submission site: July 24, 2020
 - Closing of submission site: August 2, 2020 (midnight anywhere in the world, i.e., 12pm UTC on August 2, 2020)
 - Announcement of results: August 10 2020
+
+## Get Started
+### Link to the Data
+Enroll yourself using the following link: [Register Now!](https://forms.gle/aR7e28YjgB3g5fgW6)
+
+Registering on the above link provides access to the user license and a userud and password to download the training and test data for Hindi challenge.
+
+In case you want to use the terminal for downloading, after getting access to the data, use the command 
+```
+$ wget --user=<UID> --password=<PWD> -U "" <DOWNLOAD_LINK>
+```
+
+### Quickstart
+Especially targeted at beginners and participants who would like to get a hand at ASR in practise, a ready to run recipe
+notebook on [Binder](https://mybinder.org/) of the pre-trained baseline model is available 
+[here](https://mybinder.org/v2/gh/Syzygianinfern0/WAV2TEXT.git/master). The development environment of Kaldi-ASR and all
+its required dependencies are already available. Given an audio file, and using the pre-trained weights (already loaded)
+, the model would generate the Hindi transcripts.
+
+Please checkout the `quickstart` directory for more information on the model and a downloadable notebook. 
+
+### Building Your Own ASR Model
+The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and the training scripts can be found under the 
+`asr` directory. The pre-trained models from these baseline are also available for download considering if the participants might want to start from a checkpoint.
 
 ## Get In Touch With Us!
 - If there are any queries or issues, please open a GitHub Issue [here](https://github.com/Syzygianinfern0/Hindi-ASR-Challenge/issues/new) so that others with similar queries may also be benefit from the same.
 - You can also contact us over mail at speechiitm@gmail.com
  
 **Related Links**:
+
 - Challenge Website: https://sites.google.com/view/asr-challenge/home
 - Lab Website: https://speechiitm.wixsite.com/sphlab
 - Official Site of Dr. Umesh S: http://www.ee.iitm.ac.in/~umeshs/
 - Official Institute Link: https://www.iitm.ac.in/
-
-# Get Started
-## Link to the Data
-Enroll yourself by registering on this link: [Register Now!](https://forms.gle/aR7e28YjgB3g5fgW6)
-
-Registering on the above link provides access to the user license and download the training and test data for Hindi 
-challenge
 
 <details> <summary>License and Fair Use</summary> 
 
@@ -149,43 +163,6 @@ Speech-IITM staff.
 
 </details>
 
-## Quickstart
-### Binder Demo
-Especially targeted at beginners and participants who would like to get a hand at ASR in practise, a ready to run recipe
-notebook on [Binder](https://mybinder.org/) of the pre-trained baseline model is available 
-[here](https://mybinder.org/v2/gh/Syzygianinfern0/WAV2TEXT.git/master). The development environment of Kaldi-ASR and all
-its required dependencies are already available. Given an audio file, and using the pre-trained weights (already loaded)
-, the model would generate the Hindi transcripts.
-
-Please checkout the `quickstart` directory for more information on the model and a downloadable notebook. 
-
-### Spin-it Up Locally
-If you already have [Kaldi-ASR](https://kaldi-asr.org/) set up on your local hardware, we would recommend you to try to 
-spin up the above mentioned Binder demo in the form of a script that does the same.
-
-More information on running the script can also be found under the `quickstart` directory.
-
-## Running the Baseline Models
-The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and the training scripts can be found under the 
-`models` directory. The pre-trained models from these baseline are also available for download considering if the 
-participants might want to start from a checkpoint.
-
-### GMM-HMM Acoustic Model
-// cmds
-
-// notes
-
-### Chain Model (Time-Delay Neural Network)
-// cmds
-
-// notes
-
-## Pre-Trained Weights
-// link
-
-// cmds
-
-// notes
 
 ## Citations
 ```

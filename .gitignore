@@ -148,6 +148,10 @@ dmypy.json
 
 #backups
 *~
+*.*~
+
+#markdown temp
+*.html
 # Cython debug symbols
 cython_debug/
 
