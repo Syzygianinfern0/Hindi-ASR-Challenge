@@ -35,7 +35,7 @@ echo ===========================================================================
 echo "                      Language model preparation                          "
 echo ============================================================================           
 	
-	# Create scp files
+	#Create scp files
 	for x in $train_set $recog_sets; do
 		python steps/data/generate_wav_scp.py \
 		  --wav-path=$audio_dir/$x \

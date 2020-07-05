@@ -140,8 +140,8 @@ if [ $stage -le 5 ]; then
   # handle per-utterance decoding well (the iVector starts at zero at the beginning
   # of each pseudo-speaker).
   temp_data_root=${ivectordir}
-  #utils/data/modify_speaker_info.sh --utts-per-spk-max 2 \
-   # $data_folder/${train_set}_sp_hires ${temp_data_root}/${train_set}_sp_hires_max2
+  utils/data/modify_speaker_info.sh --utts-per-spk-max 2 \
+    $data_folder/${train_set}_sp_hires ${temp_data_root}/${train_set}_sp_hires_max2
 
   steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj $nj \
     ${temp_data_root}/${train_set}_sp_hires_max2 \
@@ -173,8 +173,8 @@ fi
 
 if [ $stage -le 7 ]; then
   echo "$0: making MFCC features for low-resolution speed-perturbed data (needed for alignments)"
- # steps/make_mfcc.sh --nj $nj \
- #   --cmd "$train_cmd" $data_folder/${train_set}_sp
+  steps/make_mfcc.sh --nj $nj \
+    --cmd "$train_cmd" $data_folder/${train_set}_sp
   steps/compute_cmvn_stats.sh $data_folder/${train_set}_sp
   echo "$0: fixing input data-dir to remove nonexistent features, in case some "
   echo ".. speed-perturbed segments were too short."
