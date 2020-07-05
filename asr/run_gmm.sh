@@ -46,8 +46,8 @@ echo ===========================================================================
 	utils/prepare_lang.sh $data/local/dictionary \
 		"!SIL" $data/local/lang $data/lang || exit 1;      
 
-	bash train_lms_srilm.sh $data/$train_set $data/$dev_set $data $data/local/lmDir
-	bash arpa2G.sh $data/local/lmDir/lm.gz $data/lang $data/lang
+	bash utils/train_lms_srilm.sh $data/$train_set $data/$dev_set $data $data/local/lmDir
+	bash utils/arpa2G.sh $data/local/lmDir/lm.gz $data/lang $data/lang
 fi
 
 if [ $mfcc -eq 1 ]; then
