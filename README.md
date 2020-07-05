@@ -149,25 +149,9 @@ Speech-IITM staff.
 
 </details>
 
-## Quickstart
-### Binder Demo
-Especially targeted at beginners and participants who would like to get a hand at ASR in practise, a ready to run recipe
-notebook on [Binder](https://mybinder.org/) of the pre-trained baseline model is available 
-[here](https://mybinder.org/v2/gh/Syzygianinfern0/WAV2TEXT.git/master). The development environment of Kaldi-ASR and all
-its required dependencies are already available. Given an audio file, and using the pre-trained weights (already loaded)
-, the model would generate the Hindi transcripts.
-
-Please checkout the `quickstart` directory for more information on the model and a downloadable notebook. 
-
-### Spin-it Up Locally
-If you already have [Kaldi-ASR](https://kaldi-asr.org/) set up on your local hardware, we would recommend you to try to 
-spin up the above mentioned Binder demo in the form of a script that does the same.
-
-More information on running the script can also be found under the `quickstart` directory.
-
 ## Running the Baseline Models
 The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and the training scripts can be found under the 
-`models` directory. The pre-trained models from these baseline are also available for download considering if the 
+`asr` directory. The pre-trained models from these baseline are also available for download considering if the 
 participants might want to start from a checkpoint.
 
 ### GMM-HMM Acoustic Model

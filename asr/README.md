@@ -7,8 +7,9 @@ We have attached a pretrained model for you to get an essence of the challenge. 
 
 - Open the webpage https://mybinder.org/v2/gh/Syzygianinfern0/WAV2TEXT.git/master
 - It redirects to a binder webpage. After a few minutes, it will open into a jupyter notebook environment.
-- Click the WAV2TXT folder to open the directory and run the **Speech to Text.ipynb** file. You can run all the cells to get the english translation for a pre recorded hindi audio file.
+- Click the WAV2TXT folder to open the directory and run the **Speech to Text.ipynb** file. You can run all the cells to get the hindi transcriptions for a pre recorded hindi audio file.
 - To test with your custom data, record it into a .wav format and upload it into the **data** directory with the name **speech.wav**. Running the same cells in the ipython notebook will give you the new translation.
+- Checkout the `quickstart` directory for more information on the same.
  
 ## Setup Scripts:
 The scripts in the [challenge repository](https://github.com/Speech-Lab-IITM/IITM-ASR-Challenge/tree/master/asr) can be directly used to train your GMM-HMM and Chain models. You need to make a local copy of the repository in your system using
@@ -35,8 +36,8 @@ $ ./quickstart.sh
 ## Train Scripts:
 - Navigate to the asr folder in the Hindi-ASR-Challenge directory and edit **KALDI_ROOT** variable in the path.sh file to point to your locally installed kaldi directory. 
 - Download the data from the link given along with your registration and copy the path of that directory and enter it for the **audio_dir** argument in the **run_gmm.sh** file. 
-- Open your terminal in that directory and run ```bash -x run_gmm.sh``` to build your GMM-HMM model.
-- In the same terminal, run ```bash -x run_tdnn.sh```  to build your Chain model.
+- Open your terminal in that directory and run `bash -x run_gmm.sh` to build your GMM-HMM model.
+- In the same terminal, run `bash -x run_tdnn.sh`  to build your Chain model.
 
 
 
