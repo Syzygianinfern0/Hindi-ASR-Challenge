@@ -1,24 +1,5 @@
 #!/bin/bash
 
-# 1g is like 1f but upgrading to a "resnet-style TDNN-F model", i.e.
-#   with bypass resnet connections, and re-tuned.
-
-# local/chain/compare_wer.sh exp/chain/tdnn1f_sp exp/chain/tdnn1g_sp
-# System                tdnn1f_sp tdnn1g_sp
-#WER dev93 (tgpr)                7.03      6.68
-#WER dev93 (tg)                  6.83      6.57
-#WER dev93 (big-dict,tgpr)       4.99      4.60
-#WER dev93 (big-dict,fg)         4.52      4.26
-#WER eval92 (tgpr)               5.19      4.54
-#WER eval92 (tg)                 4.73      4.32
-#WER eval92 (big-dict,tgpr)      2.94      2.62
-#WER eval92 (big-dict,fg)        2.68      2.32
-# Final train prob        -0.0461   -0.0417
-# Final valid prob        -0.0588   -0.0487
-# Final train prob (xent)   -0.9042   -0.6461
-# Final valid prob (xent)   -0.9447   -0.6882
-# Num-params                 6071244   8354636
-
 # steps/info/chain_dir_info.pl exp/chain/tdnn1g_sp
 # exp/chain/tdnn1g_sp: num-iters=108 nj=2..8 num-params=8.4M dim=40+100->2854 combine=-0.042->-0.042 (over 2) xent:train/valid[71,107,final]=(-0.975,-0.640,-0.646/-0.980,-0.678,-0.688) logprob:train/valid[71,107,final]=(-0.067,-0.043,-0.042/-0.069,-0.050,-0.049)
 
@@ -27,15 +8,6 @@
 . ./utils/parse_options.sh
 
 set -e -o pipefail
-
-#'''
-# Check the following paths
-#1) train, test sets
-#2) gmm directory
-#3) nnet3_affix
-#4) expdir
-#5) datadir
-#'''
 
 # First the options that are passed through to run_ivector_common.sh
 # (some of which are also used in this script directly).
@@ -47,7 +19,7 @@ datadir=data
 train_set=train             #train_si284
 test_sets="dev eval"        #"test_dev93 test_eval92"
 gmm=tri3_2750_55000  #tri4b # this is the source gmm-dir that we'll use for alignments; it
-                 # should have alignments for the specified training data.
+                            # should have alignments for the specified training data.
 
 num_threads_ubm=30
 
@@ -342,7 +314,7 @@ if $test_online_decoding && [ $stage -le 19 ]; then
     	  --mfcc-config conf/mfcc_hires.conf \
     	  $lang $expdir/nnet3${nnet3_affix}/extractor ${dir} ${dir}_online
 
-  	rm $dir/.error 2>/dev/null || true
+  	rm ${dir}_online/.error 2>/dev/null || true
 
   	for data in $test_sets; do
     	(
@@ -350,23 +322,23 @@ if $test_online_decoding && [ $stage -le 19 ]; then
 	      	nspk=$(wc -l <data/${data}_hires/spk2utt)
 	      	# note: we just give it "data/${data}" as it only uses the wav.scp, the
 	      	# feature type does not matter.
-	      	for lmtype in tgpr bd_tgpr; do
+	      	#for lmtype in tgpr bd_tgpr; do
 			steps/online/nnet3/decode.sh \
 		  	  --acwt 1.0 --post-decode-acwt 10.0 \
 		  	  --nj $nspk --cmd "$decode_cmd" \
-		  	$tree_dir/graph_${lmtype} data/${data} ${dir}_online/decode_${lmtype}_${data_affix} || exit 1
-      		done
+		  	$tree_dir/graph ${datadir}/${data} ${dir}_online/decode_${data_affix} || exit 1
+      		#done
       		steps/lmrescore.sh \
         	  --self-loop-scale 1.0 \
         	  --cmd "$decode_cmd" data/lang_test_{tgpr,tg} \
-        	data/${data}_hires ${dir}_online/decode_{tgpr,tg}_${data_affix} || exit 1
+        	${datadir}/${data}_hires ${dir}/decode_${data_affix} ${dir}_online/decode_${data_affix} || exit 1
       		steps/lmrescore_const_arpa.sh --cmd "$decode_cmd" \
-        	  data/lang_test_bd_{tgpr,fgconst} \
-       		  data/${data}_hires ${dir}_online/decode_${lmtype}_${data_affix}{,_fg} || exit 1
-    	) || touch $dir/.error &
+        	  ${datadir}/lang  ${datadir}/lang \
+       		  ${datadir}/${data}_hires ${dir}/decode_${data_affix} ${dir}_online/decode_${data_affix} || exit 1
+    	) || touch ${dir}_online/.error &
   	done
   	wait
-  	[ -f $dir/.error ] && echo "$0: there was a problem while decoding" && exit 1
+  	[ -f ${dir}_online/.error ] && echo "$0: there was a problem while decoding" && exit 1
 fi
 
 
