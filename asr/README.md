@@ -21,17 +21,7 @@ The scripts require **Kaldi**, a popular speech recognition framework to be set 
 
 We recommend building Kaldi from scratch in your local system to enable all the features and customise it to your system's specifications. Checkout https://kaldi-asr.org/doc/install.html for detailed instructions.
 
-But during the build process, you might run into certain dependency mismatch issues or path related issues. So, you can set up a Docker Container in your system for a clean installation.
-
-- Follow this link https://docs.docker.com/get-docker/ to install docker in your local systems. Different operating systems have different installation procedures. So, ensure that you install the right one.
-- The docker system for the challenge emulates a Ubuntu environment inside its container. 
-- After installing the docker file, navigate to the challenge repo after cloning it into your local machine.
-- Navigate to the tools directory and run the following command
-```bash
-$ chmod +x quickstart.sh
-$ ./quickstart.sh
-```
-- This will set up kaldi and all the dependencies into your container. Now, you can procedd with running the train scripts.
+But during the build process, you might run into certain dependency mismatch issues or path related issues. To get started without any of these hassles, you can set up a Docker Container in your system for a clean installation. Please have a look at the [tools directory](https://github.com/Speech-Lab-IITM/IITM-ASR-Challenge/tree/master/tools) for more information on the same. 
 
 ## Train Scripts:
 - Navigate to the asr folder in the Hindi-ASR-Challenge directory and edit **KALDI_ROOT** variable in the path.sh file to point to your locally installed kaldi directory. 
