@@ -12,16 +12,16 @@ We have attached a pretrained model for you to get an essence of the challenge. 
 - Checkout the `quickstart` directory for more information on the same.
  
 ## Setup Scripts:
-The scripts in the [challenge repository](https://github.com/Speech-Lab-IITM/IITM-ASR-Challenge/tree/master/asr) can be directly used to train your GMM-HMM and Chain models. You need to make a local copy of the repository in your system using
+The scripts in the [challenge repository](https://github.com/Speech-Lab-IITM/Hindi-ASR-Challenge/tree/master/asr) can be directly used to train your GMM-HMM and Chain models. You need to make a local copy of the repository in your system using
 ```
-git clone https://github.com/Speech-Lab-IITM/IITM-ASR-Challenge 
+git clone https://github.com/Speech-Lab-IITM/Hindi-ASR-Challenge 
 ```
 
 The scripts require **Kaldi**, a popular speech recognition framework to be set up in your local systems. 
 
 We recommend building Kaldi from scratch in your local system to enable all the features and customise it to your system's specifications. Checkout https://kaldi-asr.org/doc/install.html for detailed instructions.
 
-But during the build process, you might run into certain dependency mismatch issues or path related issues. To get started without any of these hassles, you can set up a Docker Container in your system for a clean installation. Please have a look at the [tools directory](https://github.com/Speech-Lab-IITM/IITM-ASR-Challenge/tree/master/tools) for more information on the same. 
+But during the build process, you might run into certain dependency mismatch issues or path related issues. To get started without any of these hassles, you can set up a Docker Container in your system for a clean installation. Please have a look at the [tools directory](https://github.com/Speech-Lab-IITM/Hindi-ASR-Challenge/tree/master/tools) for more information on the same. 
 
 ## Train Scripts:
 - Navigate to the asr folder in the Hindi-ASR-Challenge directory and edit **KALDI_ROOT** variable in the path.sh file to point to your locally installed kaldi directory. 
