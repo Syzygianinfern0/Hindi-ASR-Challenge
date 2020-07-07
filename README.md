@@ -55,9 +55,9 @@ Results will be displayed on a leaderboard throughout the period that the submis
 
 ### Important Dates and Timeline
 - Release of train,dev data: July 6 2020
-- Eval data release and opening of submission site: July 24, 2020
-- Closing of submission site: August 2, 2020 (midnight anywhere in the world, i.e., 12pm UTC on August 2, 2020)
-- Announcement of results: August 10 2020
+- Eval data release and opening of submission site: August 21, 2020
+- Closing of submission site: August 30, 2020 (midnight anywhere in the world, i.e., 12pm UTC on August 30, 2020)
+- Announcement of results: Spetember 4 2020
 
 ## Get Started
 ### Link to the Data
@@ -85,7 +85,7 @@ The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and the training
 
 ## Get In Touch With Us!
 - If there are any queries or issues, please open a GitHub Issue [here](https://github.com/Syzygianinfern0/Hindi-ASR-Challenge/issues/new) so that others with similar queries may also be benefit from the same.
-- You can also contact us over mail at speechiitm@gmail.com
+- You can also contact us over mail at speechiitm@ee.iitm.ac.in
  
 **Related Links**:
 
@@ -162,20 +162,3 @@ you have read and understood the privacy policy and that you consent to the proc
 Speech-IITM staff.
 
 </details>
-
-
-## Citations
-```
-@INPROCEEDINGS{
-         Povey_ASRU2011,
-         author = {Povey, Daniel and Ghoshal, Arnab and Boulianne, Gilles and Burget, Lukas and Glembek, Ondrej and Goel, Nagendra and Hannemann, Mirko and Motlicek, Petr and Qian, Yanmin and Schwarz, Petr and Silovsky, Jan and Stemmer, Georg and Vesely, Karel},
-       keywords = {ASR, Automatic Speech Recognition, GMM, HTK, SGMM},
-          month = dec,
-          title = {The Kaldi Speech Recognition Toolkit},
-      booktitle = {IEEE 2011 Workshop on Automatic Speech Recognition and Understanding},
-           year = {2011},
-      publisher = {IEEE Signal Processing Society},
-       location = {Hilton Waikoloa Village, Big Island, Hawaii, US},
-           note = {IEEE Catalog No.: CFP11SRW-USB},
-}
-```
