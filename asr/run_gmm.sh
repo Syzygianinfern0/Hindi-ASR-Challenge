@@ -38,7 +38,7 @@ echo ===========================================================================
 	#Create scp files
 	for x in $train_set $recog_sets; do
 		python steps/data/generate_wav_scp.py \
-		  --wav-path=$audio_dir \
+		  --wav-path=$audio_dir/$x \
 		  --scp-path=$data/$x || exit 1;	
 	done
 	
