@@ -84,7 +84,7 @@ The code is inherently from [Kaldi-ASR](https://kaldi-asr.org/) and the training
 `asr` directory. The pre-trained models from these baseline are also available for download considering if the participants might want to start from a checkpoint.
 
 ## Get In Touch With Us!
-- If there are any queries or issues, please open a GitHub Issue [here](https://github.com/Syzygianinfern0/Hindi-ASR-Challenge/issues/new) so that others with similar queries may also be benefit from the same.
+- If there are any queries or issues, please open a GitHub Issue [here](https://github.com/Speech-Lab-IITM/Hindi-ASR-Challenge/issues/new) so that others with similar queries may also be benefit from the same.
 - You can also contact us over mail at speechiitm@ee.iitm.ac.in
  
 **Related Links**:
