@@ -7,6 +7,10 @@ LABEL maintainer="spsharan2000@gmail.com"
 
 RUN apt update && \
 	apt install -y \
+	apt-transport-https 
+	
+RUN apt update && \
+	apt install -y \
 	cmake \
 	sox \
 	ffmpeg \
