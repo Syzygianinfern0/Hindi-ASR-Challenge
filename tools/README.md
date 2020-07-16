@@ -27,6 +27,9 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 $ docker build -t "kaldi:Dockerfile" .   # Run this command from the current directory
 $ docker images     # The built docker image must be visible here
+
+# This command will start the container in the root of the kaldi installation
+$ docker run -it kaldi:Dockerfile
 ```
 
 ## Install Script
