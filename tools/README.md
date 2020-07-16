@@ -21,7 +21,11 @@ $ sudo add-apt-repository \
 $ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
-$ docker build -t "NAME:Dockerfile" .   # Run this command from the current directory
+# Optionally enable Docker to run without sudo during setup if running on an institute machine
+# https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
+
+
+$ docker build -t "kaldi:Dockerfile" .   # Run this command from the current directory
 $ docker images     # The built docker image must be visible here
 ```
 
