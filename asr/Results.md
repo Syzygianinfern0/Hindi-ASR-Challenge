@@ -9,4 +9,4 @@ The results obtained for the baseline gmm-hmm and tdnn models on the development
 | Tri3 - GMM |  14.03  |
 | TDNN       |  8.69   |
 
-Please note that these are just the baseline results and can be improved by using an additional language model or by augmenting the data.
+Please note that these are just the baseline model results for the closed set-up. By using additional data for the acoustic model and by including a language model, the results can be further improved. 
